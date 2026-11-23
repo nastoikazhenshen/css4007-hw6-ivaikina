@@ -1,0 +1,16 @@
+
+=== ORIGINAL MAP ===
+Converged in 12 iterations
+Batch=11 Goals=42 Holes=8 TimeLimits=0 MeanSteps=4.98 MeanReturn=0.8913
+Batch=22 Goals=46 Holes=4 TimeLimits=0 MeanSteps=5.04 MeanReturn=1.9148
+Batch=33 Goals=48 Holes=2 TimeLimits=0 MeanSteps=5.04 MeanReturn=2.4921
+
+=== EXTENDED MAP ===
+Converged in 11 iterations
+Batch=11 Goals=50 Holes=0 TimeLimits=0 MeanSteps=5.00 MeanReturn=1.5020
+Batch=22 Goals=50 Holes=0 TimeLimits=0 MeanSteps=5.00 MeanReturn=1.5020
+Batch=33 Goals=50 Holes=0 TimeLimits=0 MeanSteps=5.00 MeanReturn=1.5020
+
+Saved: outputs/part_c_episodes.csv
+Saved: outputs/part_c_summary.csv
+Total episodes: 300

@@ -6,7 +6,15 @@ ChatGPT was used to assist with Python code implementation, debugging, and resul
 
 ## Setup and reproduction
 
-The project was developed using Python 3.9.6 with Gymnasium 1.1.1, NumPy 2.0.2, and Pandas 2.3.3. Dependencies were installed in a virtual environment using pip. Part B was executed using `part_b.py`, `test_fixed_policy.py`, `run_experiments.py`, and `save_traces.py`. All experimental results were saved in the `outputs/` directory.
+## Setup and reproduction
+
+The project was developed using Python 3.9.6, Gymnasium 1.1.1, NumPy 2.0.2, and Pandas 2.3.3. Dependencies were installed in a virtual environment using pip.
+
+Part B was executed using `part_b.py`, `test_fixed_policy.py`, `run_experiments.py`, and `save_traces.py`.
+
+Part C was executed using `value_iteration.py`, `solve_part_c.py`, `gridworld_solver.py`, `simulate_part_c.py`, and `test_part_c_rules.py`.
+
+To reproduce the results, activate the virtual environment and run these scripts with `python <script_name>.py`. All results and validation reports are saved in the `outputs/` directory.
 
 ## Part A — Paper calculations
 
@@ -133,26 +141,116 @@ The experiments only evaluate predefined policies. No policy parameters or actio
 ### Conclusion
 
 The fixed policy performed perfectly in the deterministic environment but was much less successful when slipping was enabled. The experiments demonstrate how stochastic transitions affect the reliability of a policy and why repeated simulations are necessary for evaluating performance.
+
 ## Part C — Custom solver
 
 ### Compare code with paper
 
-Show V1 and the requested V2 values. Explain discrepancies.
+The custom value iteration solver reproduced the Part A calculations using the original map and transition rules.
+
+**V1 values:**
+
+```text
+-1.00  -1.00  10.00   0.00
+-1.00     #   -1.00   0.00
+-1.00  -1.00  -1.00  -1.00
+```
+
+**Requested V2 values:**
+
+| State | Paper | Python |
+| --- | --- | --- |
+| (1,2) Mud | 8.00 | 8.00 |
+| (1,3) Floor | 10.00 | 10.00 |
+| (2,3) Ice | 5.21 | 5.21 |
+
+No discrepancies were found between the handwritten calculations and Python results.
+
+[Initial value iteration results](outputs/part_c_initial_values.txt)
 
 ### Values, policies and convergence
 
-Link both value/policy maps. Record iteration counts, final value changes and tie-breaking rule.
+Value iteration was performed with a discount factor of 0.9, a tolerance of `0.000001`, and a maximum of 10,000 iterations.
+
+| Map | Iterations | Final maximum change | Converged |
+| --- | --- | --- | --- |
+| Original | 12 | 0.0000002165 | Yes |
+| Extended | 11 | 0.0000002406 | Yes |
+
+**Original map — final values:**
+
+```text
+4.2000   8.0000  10.0000   0.0000
+2.7800      #     5.8242   0.0000
+1.5358   2.8176   4.2418   2.8176
+```
+
+**Original optimal policy:**
+
+```text
+→   →   →   G
+↑   #   ↑   H
+→   →   ↑   ←
+```
+
+**Extended map — final values:**
+
+```text
+4.2000   8.0000  10.0000   0.0000
+2.7800      #     5.8242   0.0000
+1.5020   2.8176   4.2418   2.8176
+```
+
+**Extended optimal policy:**
+
+```text
+→   →   →   G
+↑   #   ↑   H
+↑   →   ↑   ←
+```
+
+Ties are resolved in the order Up, Right, Down, Left.
+
+**Saved outputs:**
+
+- [Original value map](outputs/part_c_original_values.txt)
+- [Original policy map](outputs/part_c_original_policy.txt)
+- [Extended value map](outputs/part_c_extended_values.txt)
+- [Extended policy map](outputs/part_c_extended_policy.txt)
+- [Convergence results](outputs/part_c_convergence.txt)
+- [Map comparison](outputs/part_c_map_comparison.txt)
 
 ### Simulation results
 
+Each computed policy was evaluated in three batches of 50 episodes using batch seeds 11, 22, and 33, with a 100-step limit. The episode seed scheme was identical to Part B.
+
 | Map | Batch seed | Goals /50 | Holes /50 | Time limits /50 | Mean steps | Mean discounted return |
 | --- | --- | --- | --- | --- | --- | --- |
+| Original | 11 | 42 | 8 | 0 | 4.98 | 0.8913 |
+| Original | 22 | 46 | 4 | 0 | 5.04 | 1.9148 |
+| Original | 33 | 48 | 2 | 0 | 5.04 | 2.4921 |
+| Extended | 11 | 50 | 0 | 0 | 5.00 | 1.5020 |
+| Extended | 22 | 50 | 0 | 0 | 5.00 | 1.5020 |
+| Extended | 33 | 50 | 0 | 0 | 5.00 | 1.5020 |
+
+**Overall results:** The original map achieved 136/150 goals (90.67%), while the extended map achieved 150/150 goals (100%). No episodes reached the time limit.
+
+**Saved outputs:**
+
+- [All 300 episodes](outputs/part_c_episodes.csv)
+- [Simulation batch summaries](outputs/part_c_summary.csv)
+- [Simulation log](outputs/part_c_simulation_log.txt)
 
 ### Explain your results
 
-Which values/actions changed with sand and water? Where did cost and risk matter? How do simulations relate to the computed values?
+**Effect of sand and water:** Adding sand (−2) and shallow water (−5) changed the optimal action at the start state from Right to Up. The start state's value decreased from 1.5358 to 1.5020, while all other state values and optimal actions remained unchanged.
+
+**Effect of costs and risk:** The extended policy avoids ice and its risk of slipping into the hole. The original policy chooses a riskier route because it offers a higher expected discounted return. The additional floor costs make the safer route preferable in the extended map.
+
+**Simulations vs. computed values:** Value iteration calculates expected discounted returns over an infinite horizon, while simulations estimate returns from a finite number of episodes with a 100-step limit. Results may differ because of stochastic transitions and sampling variation.
 
 ### Rule checks
 
-Show boundary/wall behavior, slip probabilities, floor rewards and terminal handling.
+All 12 validation checks passed, confirming correct wall and boundary behavior, ice probabilities (0.8, 0.1, 0.1), mud (−3), sand (−2), and water (−5) rewards, deterministic movement on sand and water, and no further transitions or rewards after entering terminal states.
 
+[Rule validation results](outputs/part_c_rule_checks.txt)

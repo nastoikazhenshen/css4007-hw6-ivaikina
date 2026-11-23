@@ -1,0 +1,22 @@
+PART C2 — VALUE ITERATION
+Map: Original Part A
+Tolerance: 1e-06
+Maximum iterations: 10000
+
+Converged: True
+Iterations: 12
+Final maximum change: 0.0000002165
+
+FINAL VALUE MAP
+   4.20    8.00   10.00    0.00
+   2.78    #       5.82    0.00
+   1.54    2.82    4.24    2.82
+
+FINAL OPTIMAL POLICY
+   →       →       →       G   
+   ↑       #       ↑       H   
+   →       →       ↑       ←   
+
+Tie-breaking rule: Up, Right, Down, Left
+
+Saved final value map and policy map.

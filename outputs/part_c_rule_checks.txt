@@ -1,0 +1,14 @@
+PASS: Wall: agent stays on mud with reward -3
+PASS: Boundary: agent stays on floor with reward -1
+PASS: Ice probabilities sum to 1
+PASS: Ice transitions use 0.8, 0.1, 0.1
+PASS: Ice outcomes: floor, wall collision, hole
+PASS: Mud entry reward is -3
+PASS: Sand entry reward is -2
+PASS: Water entry reward is -5
+PASS: Sand and water movement is deterministic
+PASS: Goal has no outgoing transitions or rewards
+PASS: Hole has no outgoing transitions or rewards
+PASS: Goal entry gives +10
+
+ALL 12 RULE CHECKS PASSED

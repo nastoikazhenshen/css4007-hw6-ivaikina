@@ -1,0 +1,17 @@
+
+V0 — Initial Values
+   0.00    0.00    0.00    0.00
+   0.00    #       0.00    0.00
+   0.00    0.00    0.00    0.00
+
+V1 — First Iteration
+  -1.00   -1.00   10.00    0.00
+  -1.00    #      -1.00    0.00
+  -1.00   -1.00   -1.00   -1.00
+
+V2 — Requested States
+State (1,2): V2 = 8.00
+State (1,3): V2 = 10.00
+State (2,3): V2 = 5.21
+
+ALL PART A CHECKS PASSED
