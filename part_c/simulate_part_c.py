@@ -10,7 +10,7 @@ from gridworld_solver import (
     DISCOUNT,
 )
 
-OUTPUT_DIR = Path("outputs")
+OUTPUT_DIR = Path(__file__).resolve().parent / "outputs"
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 BATCH_SEEDS = [11, 22, 33]
