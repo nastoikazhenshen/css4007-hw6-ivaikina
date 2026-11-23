@@ -117,7 +117,7 @@ def main():
 
     print("\nTie-breaking rule: Up, Right, Down, Left")
 
-    output_dir = Path("outputs")
+    output_dir = Path(__file__).resolve().parent / "outputs"
     output_dir.mkdir(exist_ok=True)
 
     value_lines = []
