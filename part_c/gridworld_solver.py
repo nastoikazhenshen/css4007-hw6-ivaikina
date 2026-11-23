@@ -223,7 +223,7 @@ def run_map(name, grid):
     print("\nOPTIMAL POLICY")
     print(policy_text)
 
-    output_dir = Path("outputs")
+    output_dir = Path(__file__).resolve().parent / "outputs"
     output_dir.mkdir(exist_ok=True)
 
     prefix = f"part_c_{name.lower()}"
