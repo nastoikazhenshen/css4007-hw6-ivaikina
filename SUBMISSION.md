@@ -6,21 +6,17 @@ ChatGPT was used to assist with Python code implementation, debugging, and resul
 
 ## Setup and reproduction
 
-## Setup and reproduction
-
 The project was developed using Python 3.9.6, Gymnasium 1.1.1, NumPy 2.0.2, and Pandas 2.3.3. Dependencies were installed in a virtual environment using pip.
 
-Part B was executed using `part_b.py`, `test_fixed_policy.py`, `run_experiments.py`, and `save_traces.py`.
+Part B was executed using `python part_b/part_b.py`, `python part_b/test_fixed_policy.py`, `python part_b/run_experiments.py`, and `python part_b/save_traces.py`.
 
-Part C was executed using `value_iteration.py`, `solve_part_c.py`, `gridworld_solver.py`, `simulate_part_c.py`, and `test_part_c_rules.py`.
+Part C was executed using `python part_c/value_iteration.py`, `python part_c/solve_part_c.py`, `python part_c/gridworld_solver.py`, `python part_c/simulate_part_c.py`, and `python part_c/test_part_c_rules.py`.
 
-To reproduce the results, activate the virtual environment and run these scripts with `python <script_name>.py`. All results and validation reports are saved in the `outputs/` directory.
+To reproduce the results, activate the virtual environment and run the commands above from the repository root. Results and validation reports are saved in `part_b/outputs/` and `part_c/outputs/`.
 
 ## Part A — Paper calculations
 
 Seven handwritten notebook pages in reading order. Photographs are kept at their original resolution.
-
-**Note:** The image files need to be uploaded to the `part_a/` folder. The links below will work once that upload is completed.
 
 1. [Page 01 — Original map, rewards, states and actions](part_a/page_01.jpg)
 2. [Page 02 — MDP definitions, V0 map, start of V1](part_a/page_02.jpg)
@@ -108,11 +104,11 @@ No episode reached the 100-step time limit.
 
 ### Saved Outputs
 
-- [All 600 episode records](outputs/part_b_episodes.csv)
-- [Batch summary results](outputs/part_b_summary.csv)
-- [Initial successful episode](outputs/part_b_first_episode.txt)
-- [Successful slippery episode](outputs/part_b_success_trace.txt)
-- [Failed slippery episode](outputs/part_b_failure_trace.txt)
+- [All 600 episode records](part_b/outputs/part_b_episodes.csv)
+- [Batch summary results](part_b/outputs/part_b_summary.csv)
+- [Initial successful episode](part_b/outputs/part_b_first_episode.txt)
+- [Successful slippery episode](part_b/outputs/part_b_success_trace.txt)
+- [Failed slippery episode](part_b/outputs/part_b_failure_trace.txt)
 
 **Example traces:**
 
@@ -166,7 +162,7 @@ The custom value iteration solver reproduced the Part A calculations using the o
 
 No discrepancies were found between the handwritten calculations and Python results.
 
-[Initial value iteration results](outputs/part_c_initial_values.txt)
+[Initial value iteration results](part_c/outputs/part_c_initial_values.txt)
 
 ### Values, policies and convergence
 
@@ -213,12 +209,12 @@ Ties are resolved in the order Up, Right, Down, Left.
 
 **Saved outputs:**
 
-- [Original value map](outputs/part_c_original_values.txt)
-- [Original policy map](outputs/part_c_original_policy.txt)
-- [Extended value map](outputs/part_c_extended_values.txt)
-- [Extended policy map](outputs/part_c_extended_policy.txt)
-- [Convergence results](outputs/part_c_convergence.txt)
-- [Map comparison](outputs/part_c_map_comparison.txt)
+- [Original value map](part_c/outputs/part_c_original_values.txt)
+- [Original policy map](part_c/outputs/part_c_original_policy.txt)
+- [Extended value map](part_c/outputs/part_c_extended_values.txt)
+- [Extended policy map](part_c/outputs/part_c_extended_policy.txt)
+- [Convergence results](part_c/outputs/part_c_convergence.txt)
+- [Map comparison](part_c/outputs/part_c_map_comparison.txt)
 
 ### Simulation results
 
@@ -237,9 +233,9 @@ Each computed policy was evaluated in three batches of 50 episodes using batch s
 
 **Saved outputs:**
 
-- [All 300 episodes](outputs/part_c_episodes.csv)
-- [Simulation batch summaries](outputs/part_c_summary.csv)
-- [Simulation log](outputs/part_c_simulation_log.txt)
+- [All 300 episodes](part_c/outputs/part_c_episodes.csv)
+- [Simulation batch summaries](part_c/outputs/part_c_summary.csv)
+- [Simulation log](part_c/outputs/part_c_simulation_log.txt)
 
 ### Explain your results
 
@@ -253,4 +249,4 @@ Each computed policy was evaluated in three batches of 50 episodes using batch s
 
 All 12 validation checks passed, confirming correct wall and boundary behavior, ice probabilities (0.8, 0.1, 0.1), mud (−3), sand (−2), and water (−5) rewards, deterministic movement on sand and water, and no further transitions or rewards after entering terminal states.
 
-[Rule validation results](outputs/part_c_rule_checks.txt)
+[Rule validation results](part_c/outputs/part_c_rule_checks.txt)
