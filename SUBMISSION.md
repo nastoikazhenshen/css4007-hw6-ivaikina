@@ -2,7 +2,7 @@
 
 ## AI-use declaration
 
-Which tools did you use, and for what?
+ChatGPT was used to explain Markov decision processes and value iteration, clarify the ice transition probabilities, and help check the Part A hand calculations. The handwritten solution was written in my notebook.
 
 ## Setup and reproduction
 
@@ -10,7 +10,21 @@ Record dependency versions, installation commands and exact run commands.
 
 ## Part A — Paper calculations
 
-Link your scan/photo here. Include V1 for every nonterminal tile, the three requested V2 calculations, best-action arrows/ties and your explanation. Commit this part before coding.
+Seven handwritten notebook pages in reading order. Photographs are kept at their original resolution.
+
+**Note:** The image files need to be uploaded to the `part_a/` folder. The links below will work once that upload is completed.
+
+1. [Page 01 — Original map, rewards, states and actions](part_a/page_01.jpg)
+2. [Page 02 — MDP definitions, V0 map, start of V1](part_a/page_02.jpg)
+3. [Page 03 — V1 calculations, including ice probabilities](part_a/page_03.jpg)
+4. [Page 04 — Remaining V1, completed V1 map, start of V2](part_a/page_04.jpg)
+5. [Page 05 — V2 for mud and ordinary floor, ice setup](part_a/page_05.jpg)
+6. [Page 06 — Ice V2 calculations, arrows and tied actions](part_a/page_06.jpg)
+7. [Page 07 — Explanation and conclusion](part_a/page_07.jpg)
+
+[Part A folder](part_a/)
+
+**Recorded results:** `V2(1,2)=8` (Right), `V2(1,3)=10` (Right), `V2(2,3)=5.21` (Up). No tied best actions at the three requested states.
 
 ## Part B — FrozenLake
 
