@@ -1,0 +1,105 @@
+FrozenLake-v1 — Episode Trace
+Policy: fixed
+Slippery: True
+Batch seed: 11
+Episode seed: 11000
+
+Initial map:
+
+[41mS[0mFFF
+FHFH
+FFFH
+HFFG
+
+Step 1
+From state: 0
+Chosen action: Down
+To state: 1
+Reward: 0.0
+  (Down)
+S[41mF[0mFF
+FHFH
+FFFH
+HFFG
+
+Step 2
+From state: 1
+Chosen action: Left
+To state: 1
+Reward: 0.0
+  (Left)
+S[41mF[0mFF
+FHFH
+FFFH
+HFFG
+
+Step 3
+From state: 1
+Chosen action: Left
+To state: 1
+Reward: 0.0
+  (Left)
+S[41mF[0mFF
+FHFH
+FFFH
+HFFG
+
+Step 4
+From state: 1
+Chosen action: Left
+To state: 1
+Reward: 0.0
+  (Left)
+S[41mF[0mFF
+FHFH
+FFFH
+HFFG
+
+Step 5
+From state: 1
+Chosen action: Left
+To state: 0
+Reward: 0.0
+  (Left)
+[41mS[0mFFF
+FHFH
+FFFH
+HFFG
+
+Step 6
+From state: 0
+Chosen action: Down
+To state: 4
+Reward: 0.0
+  (Down)
+SFFF
+[41mF[0mHFH
+FFFH
+HFFG
+
+Step 7
+From state: 4
+Chosen action: Down
+To state: 4
+Reward: 0.0
+  (Down)
+SFFF
+[41mF[0mHFH
+FFFH
+HFFG
+
+Step 8
+From state: 4
+Chosen action: Down
+To state: 5
+Reward: 0.0
+  (Down)
+SFFF
+F[41mH[0mFH
+FFFH
+HFFG
+
+FINAL RESULT
+Outcome: hole
+Steps: 8
+Total reward: 0.0

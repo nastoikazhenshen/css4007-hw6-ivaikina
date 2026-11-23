@@ -1,0 +1,248 @@
+FrozenLake-v1 — Episode Trace
+Policy: fixed
+Slippery: True
+Batch seed: 11
+Episode seed: 11012
+
+Initial map:
+
+[41mS[0mFFF
+FHFH
+FFFH
+HFFG
+
+Step 1
+From state: 0
+Chosen action: Down
+To state: 0
+Reward: 0.0
+  (Down)
+[41mS[0mFFF
+FHFH
+FFFH
+HFFG
+
+Step 2
+From state: 0
+Chosen action: Down
+To state: 0
+Reward: 0.0
+  (Down)
+[41mS[0mFFF
+FHFH
+FFFH
+HFFG
+
+Step 3
+From state: 0
+Chosen action: Down
+To state: 0
+Reward: 0.0
+  (Down)
+[41mS[0mFFF
+FHFH
+FFFH
+HFFG
+
+Step 4
+From state: 0
+Chosen action: Down
+To state: 0
+Reward: 0.0
+  (Down)
+[41mS[0mFFF
+FHFH
+FFFH
+HFFG
+
+Step 5
+From state: 0
+Chosen action: Down
+To state: 4
+Reward: 0.0
+  (Down)
+SFFF
+[41mF[0mHFH
+FFFH
+HFFG
+
+Step 6
+From state: 4
+Chosen action: Down
+To state: 8
+Reward: 0.0
+  (Down)
+SFFF
+FHFH
+[41mF[0mFFH
+HFFG
+
+Step 7
+From state: 8
+Chosen action: Right
+To state: 9
+Reward: 0.0
+  (Right)
+SFFF
+FHFH
+F[41mF[0mFH
+HFFG
+
+Step 8
+From state: 9
+Chosen action: Right
+To state: 13
+Reward: 0.0
+  (Right)
+SFFF
+FHFH
+FFFH
+H[41mF[0mFG
+
+Step 9
+From state: 13
+Chosen action: Right
+To state: 13
+Reward: 0.0
+  (Right)
+SFFF
+FHFH
+FFFH
+H[41mF[0mFG
+
+Step 10
+From state: 13
+Chosen action: Right
+To state: 13
+Reward: 0.0
+  (Right)
+SFFF
+FHFH
+FFFH
+H[41mF[0mFG
+
+Step 11
+From state: 13
+Chosen action: Right
+To state: 13
+Reward: 0.0
+  (Right)
+SFFF
+FHFH
+FFFH
+H[41mF[0mFG
+
+Step 12
+From state: 13
+Chosen action: Right
+To state: 14
+Reward: 0.0
+  (Right)
+SFFF
+FHFH
+FFFH
+HF[41mF[0mG
+
+Step 13
+From state: 14
+Chosen action: Right
+To state: 14
+Reward: 0.0
+  (Right)
+SFFF
+FHFH
+FFFH
+HF[41mF[0mG
+
+Step 14
+From state: 14
+Chosen action: Right
+To state: 10
+Reward: 0.0
+  (Right)
+SFFF
+FHFH
+FF[41mF[0mH
+HFFG
+
+Step 15
+From state: 10
+Chosen action: Down
+To state: 9
+Reward: 0.0
+  (Down)
+SFFF
+FHFH
+F[41mF[0mFH
+HFFG
+
+Step 16
+From state: 9
+Chosen action: Right
+To state: 13
+Reward: 0.0
+  (Right)
+SFFF
+FHFH
+FFFH
+H[41mF[0mFG
+
+Step 17
+From state: 13
+Chosen action: Right
+To state: 14
+Reward: 0.0
+  (Right)
+SFFF
+FHFH
+FFFH
+HF[41mF[0mG
+
+Step 18
+From state: 14
+Chosen action: Right
+To state: 14
+Reward: 0.0
+  (Right)
+SFFF
+FHFH
+FFFH
+HF[41mF[0mG
+
+Step 19
+From state: 14
+Chosen action: Right
+To state: 14
+Reward: 0.0
+  (Right)
+SFFF
+FHFH
+FFFH
+HF[41mF[0mG
+
+Step 20
+From state: 14
+Chosen action: Right
+To state: 14
+Reward: 0.0
+  (Right)
+SFFF
+FHFH
+FFFH
+HF[41mF[0mG
+
+Step 21
+From state: 14
+Chosen action: Right
+To state: 15
+Reward: 1.0
+  (Right)
+SFFF
+FHFH
+FFFH
+HFF[41mG[0m
+
+FINAL RESULT
+Outcome: goal
+Steps: 21
+Total reward: 1.0
