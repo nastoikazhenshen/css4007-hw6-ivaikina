@@ -7,7 +7,7 @@ import gymnasium as gym
 from fixed_policy import FIXED_POLICY
 
 
-OUTPUT_DIR = Path("outputs")
+OUTPUT_DIR = Path(__file__).resolve().parent / "outputs"
 EPISODES_FILE = OUTPUT_DIR / "part_b_episodes.csv"
 
 GOAL_STATE = 15
