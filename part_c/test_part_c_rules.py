@@ -6,7 +6,7 @@ from gridworld_solver import (
     EXTENDED_MAP,
 )
 
-OUTPUT_DIR = Path("outputs")
+OUTPUT_DIR = Path(__file__).resolve().parent / "outputs"
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 original = GridWorld(ORIGINAL_MAP)
